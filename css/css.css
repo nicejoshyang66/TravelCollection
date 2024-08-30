@@ -450,6 +450,9 @@
   top: 0;
   left: 0;
   z-index: 13;
+  /* josh */
+  color:red;
+  background-color: #476a0f;
 }
 
 @media only screen and (max-width: 960px) {
@@ -488,6 +491,7 @@
 
 .header__right {
   width: calc(100% - 188px);
+
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -496,6 +500,12 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+        /* josh */
+          background-color: red;
+}
+
+.header__right{
+  position: relative;
 }
 
 .member-user {
