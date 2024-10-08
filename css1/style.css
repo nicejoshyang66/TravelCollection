@@ -1,0 +1,51 @@
+* {
+    font-size: 20px;
+}
+
+.aa {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.bb {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.navbar {
+    /* opacity: 0.2; */
+    background-color: azure
+}
+
+.navbar-nav {
+    padding-right: 180px;
+}
+
+.header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 13;
+}
+
+ul li {
+    padding-right: 20px;
+    font-size: 1.5rem;
+}
+
+ul li:hover {
+    background-color: aqua;
+}
+
+.idx-search {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    /* background-color: #fff; */
+    /* background-color: red; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

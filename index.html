@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css1/css.css">
+    <link rel="stylesheet" href="./css1/style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-md navbar-light">
+            <a href="#" class="navbar-brand">
+                <img src="./images1/logo.svg" alt="Logo" width="200" height="100" class="d-inlink-block  align-top" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu"
+                aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="toggleMobileMenu">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li>
+                        <a href="#">即將成團</a>
+                    </li>
+                    <li>
+                        <a href="#">行程簡介</a>
+                    </li>
+                    <li>
+                        <a href="#">包團諮詢</a>
+                    </li>
+                    <li>
+                        <a href="#">會員專區</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- header// -->
+
+    <main>
+        <!-- banner -->
+        <div class="banner-area">
+            <!-- Carousel -->
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images4/FuShanBotanicGarden_1920x600.jpg" alt="Los Angeles" class="d-block"
+                            style="width:100%">
+                        <div class="carousel-caption">
+                            <h3>Los Angeles</h3>
+                            <p>We had such a great time in LA!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images4/Jade_Mt.jpg" alt="Chicago" class="d-block" style="width:100%">
+                        <div class="carousel-caption">
+                            <h3>Chicago</h3>
+                            <p>Thank you, Chicago!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images4/miaoli_fire_mt.jpg" alt="New York" class="d-block" style="width:100%">
+                        <div class="carousel-caption">
+                            <h3>New York</h3>
+                            <p>We love the Big Apple!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+            <div class="idx-search">
+                <form action="search.aspx" class="search flex" method="get" onsubmit="return check_form()">
+                    <div class="search__title flex">
+                        <img src="images1/icon-search.gif" alt="">
+                        <span>搜行程</span>
+                    </div>
+                    <div class="search__input-area flex">
+                        <div class="search__destination">
+                            <input type="text" class="form-control search-input" name="q" id="q" placeholder="請輸入行程的名稱"
+                                maxlength="20">
+                        </div>
+                        <div class="search__daterange input-daterange flex">
+                            <div class="search__date1">
+                                <input type="text" class="form-control search-input-date" name="startDate"
+                                    id="startDate" placeholder="起始日期" readonly="">
+                                <i class="icon-calendar"></i>
+                            </div>
+                            <div class="search__date2">
+                                <input type="text" class="form-control search-input-date" id="endDate" name="endDate"
+                                    placeholder="結束日期" readonly="">
+                                <i class="icon-calendar"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search__btn-area flex">
+                        <input type="submit" value="搜尋GO!" class="search__btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- banner// -->
+        <div class="big-title col-12">
+            <div class="big-title__txt">
+                <img src="images2/big-title-img01.png" alt="熱門目的地" class="big-title__img">
+                <h2 class="big-title__word">熱門目的地</h2>
+            </div>
+        </div>
+        <!-- 熱門目的地 -->
+        <div class="ide-hot-area all-container container">
+            <div class="row">
+                <!-- <div class="idx-hot idx-hot-desktop "> -->
+
+                    <div class="idx-hot__item ">
+                        <a href="travel-list.aspx?placeId=1" title="" class="idx-hot__link flex">
+                            <span>台灣北部</span>
+                        </a>
+                        <div class="idx-hot__img">
+                            <img src="/images2/idx-category-01.jpg" alt="台灣北部">
+                        </div>
+                    </div>
+
+                    <div class="idx-hot__item">
+                        <a href="travel-list.aspx?placeId=2" title="" class="idx-hot__link flex">
+                            <span>台灣中部</span>
+                        </a>
+                        <div class="idx-hot__img">
+                            <img src="/images2/idx-category-02.jpg" alt="台灣中部">
+                        </div>
+                    </div>
+
+                    <div class="idx-hot__item ">
+                        <a href="travel-list.aspx?placeId=3" title="" class="idx-hot__link flex">
+                            <span>台灣南部</span>
+                        </a>
+                        <div class="idx-hot__img col-sm-6 col-md-3">
+                            <img src="/images2/idx-category-03.jpg" alt="台灣南部">
+                        </div>
+                    </div>
+
+                    <div class="idx-hot__item ">
+                        <a href="travel-list.aspx?placeId=4" title="" class="idx-hot__link flex">
+                            <span>台灣東部</span>
+                        </a>
+                        <div class="idx-hot__img  ">
+                            <img src="/images2/idx-category-04.jpg" alt="台灣東部">
+                        </div>
+                    </div>
+
+                    <div class="idx-hot__item">
+                        <a href="travel-list.aspx?placeId=5" title="" class="idx-hot__link flex">
+                            <span>澎金馬</span>
+                        </a>
+                        <div class="idx-hot__img">
+                            <img src="/images2/idx-category-05.jpg" alt="澎金馬">
+                        </div>
+                    </div>
+
+                    <div class="idx-hot__item ">
+                        <a href="travel-list.aspx?placeId=6" title="" class="idx-hot__link flex">
+                            <span>東北亞</span>
+                        </a>
+                        <div class="idx-hot__img">
+                            <img src="/images2/idx-category-06.jpg" alt="東北亞">
+                        </div>
+                    </div>
+
+                    <div class="idx-hot__item ">
+                        <a href="travel-list.aspx?placeId=7" title="" class="idx-hot__link flex">
+                            <span>東南亞</span>
+                        </a>
+                        <div class="idx-hot__img">
+                            <img src="/images2/idx-category-07.jpg" alt="東南亞">
+                        </div>
+                    </div>
+
+                    <div class="idx-hot__item ">
+                        <a href="travel-list.aspx?placeId=8" title="" class="idx-hot__link flex">
+                            <span>中國大陸</span>
+                        </a>
+                        <div class="idx-hot__img">
+                            <img src="/images2/idx-category-08.jpg" alt="中國大陸">
+                        </div>
+                    </div>
+
+                <!-- </div> -->
+                <!-- ONE//  -->
+            </div> 
+        </div>
+        <!-- 熱門目的地//-->
+        <!-- 季節精選 -->
+         
+        <div class="gray-bg-area">
+            <div class="big-title">
+                <div class="big-title__txt">
+                    <img src="images2/big-title-img02.png" alt="季節精選" class="big-title__img">
+                    <h2 class="big-title__word">季節精選</h2>
+                </div>
+            </div>
+            <!--desktop-->
+            <div class="idx-featured flex idx-featured-desktop">
+                <div class="idx-featured__box idx-featured__list">
+
+                    <div class="idx-featured__item">
+                        <a href="https://www.goodtour.com.tw/travel-detail.aspx?Id=69" class="idx-featured__link flex">
+                            <span class="idx-featured__title">《海岸漫遊》最純海岸線 - 阿塱壹古道一日遊-高雄出發</span>
+                            <span class="idx-featured__price all-price">
+                                <em>NT</em>
+                                <b>1650</b>
+                                <em>起</em>
+                            </span>
+                        </a>
+                        <div class="idx-feature__img">
+                            <img src="./images3/201220115155691.jpg" alt="《海岸漫遊》最純海岸線 - 阿塱壹古道一日遊-高雄出發">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="idx-featured__box2 idx-featured__list">
+
+                    <div class="idx-featured__item">
+                        <a href="https://www.goodtour.com.tw/travel-detail.aspx?Id=43" class="idx-featured__link flex">
+                            <span class="idx-featured__title">《六人成行》大地之肺．福山植物園一日輕健行</span>
+                            <span class="idx-featured__price all-price">
+                                <em>NT</em>
+                                <b>1688</b>
+                                <em>起</em>
+                            </span>
+                        </a>
+                        <div class="idx-feature__img">
+                            <img src="./images4/FuShanBotanicGarden_1920x600.jpg" alt="《六人成行》大地之肺．福山植物園一日輕健行">
+                        </div>
+                    </div>
+
+                    <div class="idx-featured__item">
+                        <a href="https://www.goodtour.com.tw/travel-detail.aspx?Id=12" class="idx-featured__link flex">
+                            <span class="idx-featured__title">《台灣屋脊》玉山主峰睥睨群山兩天兩夜 - 台北出發</span>
+                            <span class="idx-featured__price all-price">
+                                <em>NT</em>
+                                <b>7700</b>
+                                <em>起</em>
+                            </span>
+                        </a>
+                        <div class="idx-feature__img">
+                            <img src="./images4/Jade_Mt.jpg" alt="《台灣屋脊》玉山主峰睥睨群山兩天兩夜 - 台北出發">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="idx-featured__box2 idx-featured__list">
+
+                    <div class="idx-featured__item">
+                        <a href="https://www.goodtour.com.tw/travel-detail.aspx?Id=44" class="idx-featured__link flex">
+                            <span class="idx-featured__title">《泰雅部落巨木》司馬庫斯&amp;鎮西堡檜木群二日</span>
+                            <span class="idx-featured__price all-price">
+                                <em>NT</em>
+                                <b>6600</b>
+                                <em>起</em>
+                            </span>
+                        </a>
+                        <div class="idx-feature__img">
+                            <img src="./images3/220104105838508.jpg" alt="《泰雅部落巨木》司馬庫斯&amp;鎮西堡檜木群二日">
+                        </div>
+                    </div>
+
+                    <div class="idx-featured__item">
+                        <a href="https://www.goodtour.com.tw/travel-detail.aspx?Id=110" class="idx-featured__link flex">
+                            <span class="idx-featured__title">《聖山之路》山上人家森林農場．鵝公髻山一日健行</span>
+                            <span class="idx-featured__price all-price">
+                                <em>NT</em>
+                                <b>1800</b>
+                                <em>起</em>
+                            </span>
+                        </a>
+                        <div class="idx-feature__img">
+                            <img src="./images3/210525135317338.jpg" alt="《聖山之路》山上人家森林農場．鵝公髻山一日健行">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="idx-featured__box2 idx-featured__list">
+
+                    <div class="idx-featured__item">
+                        <a href="https://www.goodtour.com.tw/travel-detail.aspx?Id=3&amp;d=2021/04&amp;ct=on#travel-calendar"
+                            class="idx-featured__link flex">
+                            <span class="idx-featured__title">★ 海岸漫遊 ★ 阿塱壹古道、水上草原生態體驗二日遊</span>
+                            <span class="idx-featured__price all-price">
+                                <em>NT</em>
+                                <b>5700</b>
+                                <em>起</em>
+                            </span>
+                        </a>
+                        <div class="idx-feature__img">
+                            <img src="/img/Travel/201220115155691.jpg" alt="★ 海岸漫遊 ★ 阿塱壹古道、水上草原生態體驗二日遊">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="idx-featured__box idx-featured__list">
+
+                </div>
+                <div class="idx-featured__box2 idx-featured__list">
+
+                </div>
+
+                <div class="open-btn-box">
+                    <div class="open-btn">更多行程<i class="icon-arrow-thin-down"></i></div>
+                </div>
+
+            </div>
+            <!--desktop //-->
+        </div>
+        <!-- 季節精選// -->
+        <!-- 熱門推薦  -->
+        <div class="idx-rcmd-area">
+            <div class="big-title">
+                <div class="big-title__txt">
+                    <img src="images/big-title-img03.png" alt="熱門推薦" class="big-title__img">
+                    <h2 class="big-title__word">熱門推薦</h2>
+                </div>
+            </div>
+            <div class="idx-rcmd flex">
+
+                <div class="idx-rcmd__item idx-tour">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=12" title="《台灣屋脊》玉山主峰睥睨群山兩天兩夜 - 台北出發">
+                            <img src="./images3/Jade_Mt_E_SUN.jpg" alt="《台灣屋脊》玉山主峰睥睨群山兩天兩夜 - 台北出發"></a>
+                        <div class="idx-tour__img-text">登山健行</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=12" class="idx-tour__title"
+                            title="《台灣屋脊》玉山主峰睥睨群山兩天兩夜 - 台北出發">《台灣屋脊》玉山主峰睥睨群山兩天兩夜 - 台北出發</a>
+                        <div class="idx-tour__word">
+                            日本人發現玉山高度超過富士山近200公尺，改玉山為「新高山」，週遭主要山峰以東西南北稱呼。玉山主峰為東、西、南、北峰所環繞，東望馬博拉斯山及秀姑巒山，西眺阿里山山脈，往南可見關山，北瞻則雪山、南湖大山、中央尖山等歷歷在望。
+                            ◎ 2024年度"雪季期"預計『為2024年1月1日起至3月31日止(依玉管處公告為準)』隊員具雪地經驗及裝備。
+                            ★溫馨提醒★此行程出發前30天抽籤，出發前35天截止報名其他玉山行程連結
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>NT</em><b>7000</b><em>起</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idx-rcmd__item idx-tour">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=46" title="《共享部落》司馬庫斯巨木森林二日健行">
+                            <img src="./images3/smangus_yaya_tree.jpg" alt="《共享部落》司馬庫斯巨木森林二日健行"></a>
+                        <div class="idx-tour__img-text">台灣深度旅行</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=46" class="idx-tour__title"
+                            title="《共享部落》司馬庫斯巨木森林二日健行">《共享部落》司馬庫斯巨木森林二日健行</a>
+                        <div class="idx-tour__word">
+                            上帝的部落 -
+                            司馬庫斯Smangus，位於新竹縣尖石鄉，台灣最後一個黑暗部落。以傳統土地共有、合作共生的精神，共同經營部落，連結土地與人，並將泰雅民族文化、以及共享制度毫無保留地分享及傳達，給來此體驗的貴賓們。
+                            2024年櫻花季開放結束，期待 2025櫻花季來臨。
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>NT</em><b>5600</b><em>起</em>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idx-rcmd__item idx-tour">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=220" title="《尼泊爾》ABCD安納普娜基地營與普恩山14日健行">
+                            <img src="./images3/201220115155691.jpg" alt="《尼泊爾》ABC安納普娜基地營與普恩山14日健行"></a>
+                        <div class="idx-tour__img-text">國外行程</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=220" class="idx-tour__title"
+                            title="《尼泊爾》ABC安納普娜基地營與普恩山14日健行">《尼泊爾》ABC安納普娜基地營與普恩山14日健行</a>
+                        <div class="idx-tour__word">
+                            聖母峰，尼泊爾稱薩加瑪塔峰（尼泊爾語：सगरमाथा，轉寫：Sagarmāthā）海拔8848公尺，世界第一高峰，同時也是喜馬拉雅山脈的主峰，平均溫度在零下29度，在聯合國教科文組織已經將薩加瑪塔國家公園列入世界自然遺產之內。聖母峰基地營(Everest
+                            Base Camp，EBC) 是要攀登聖母峰的登山者的主要路線之一，位於聖母峰山腳下有著世界海拔最高冰河的高山景觀。薩加瑪塔國家公園（尼泊爾語：सगरमाथा
+                            राष्ट्रिय
+                            निकुञ्ज）位於珠穆朗瑪峰南麓，同時也是尼泊爾旅遊勝地，位於首都加德滿都東北的第一省索盧坤布縣，北部與西藏珠穆朗瑪峰自然保護區接壤。薩迦瑪塔屬於一個特殊的地區，全區遍布形態各異的山脈、冰河和深谷。
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>NT</em><b>42000</b><em>起</em>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idx-rcmd__item idx-tour">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=192" title="《台灣屋脊》玉山主峰睥睨群山兩天一夜 - 台中出發">
+                            <img src="./images3/IMG20230506052826 (4).jpg" alt="《台灣屋脊》玉山主峰睥睨群山兩天一夜 - 台中出發"></a>
+                        <div class="idx-tour__img-text">登山健行</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=192" class="idx-tour__title"
+                            title="《台灣屋脊》玉山主峰睥睨群山兩天一夜 - 台中出發">《台灣屋脊》玉山主峰睥睨群山兩天一夜 - 台中出發</a>
+                        <div class="idx-tour__word">
+                            日本人發現玉山高度超過富士山近200公尺，改玉山為「新高山」，週遭主要山峰以東西南北稱呼。玉山主峰為東、西、南、北峰所環繞，東望馬博拉斯山及秀姑巒山，西眺阿里山山脈，往南可見關山，北瞻則雪山、南湖大山、中央尖山等歷歷在望。
+                            ◎ 2024年度"雪季期"預計『為2024年1月1日起至3月31日止(依玉管處公告為準)』隊員具雪地經驗及裝備。
+                            ★溫馨提醒★此行程出發前30天抽籤，出發前35天截止報名其他玉山行程連結
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>NT</em><b>5800</b><em>起</em>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idx-rcmd__item idx-tour">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=197" title="《尼泊爾》ABCDEBC聖母峰基地營與GOKYO墎其爾湖18日健行">
+                            <img src="./images3/201220115155691.jpg" alt="《尼泊爾》EBC聖母峰基地營與GOKYO墎其爾湖18日健行"></a>
+                        <div class="idx-tour__img-text">國外行程</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=197" class="idx-tour__title"
+                            title="《尼泊爾》EBC聖母峰基地營與GOKYO墎其爾湖18日健行">《尼泊爾》EBC聖母峰基地營與GOKYO墎其爾湖18日健行</a>
+                        <div class="idx-tour__word">
+                            聖母峰，尼泊爾稱薩加瑪塔峰（尼泊爾語：सगरमाथा，轉寫：Sagarmāthā）海拔8848公尺，世界第一高峰，同時也是喜馬拉雅山脈的主峰，平均溫度在零下29度，在聯合國教科文組織已經將薩加瑪塔國家公園列入世界自然遺產之內。聖母峰基地營(Everest
+                            Base Camp，EBC) 是要攀登聖母峰的登山者的主要路線之一，位於聖母峰山腳下有著世界海拔最高冰河的高山景觀。薩加瑪塔國家公園（尼泊爾語：सगरमाथा
+                            राष्ट्रिय
+                            निकुञ्ज）位於珠穆朗瑪峰南麓，同時也是尼泊爾旅遊勝地，位於首都加德滿都東北的第一省索盧坤布縣，北部與西藏珠穆朗瑪峰自然保護區接壤。薩迦瑪塔屬於一個特殊的地區，全區遍布形態各異的山脈、冰河和深谷。
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>即將開團</em>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idx-rcmd__item idx-tour">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=44" title="《泰雅部落巨木》司馬庫斯&amp;鎮西堡檜木群二日">
+                            <img src="./images3/smangus_yaya_tree.jpg" alt="《泰雅部落巨木》司馬庫斯&amp;鎮西堡檜木群二日"></a>
+                        <div class="idx-tour__img-text">台灣深度旅行</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=44" class="idx-tour__title"
+                            title="《泰雅部落巨木》司馬庫斯&amp;鎮西堡檜木群二日">《泰雅部落巨木》司馬庫斯&amp;鎮西堡檜木群二日</a>
+                        <div class="idx-tour__word">
+                            上帝的部落 -
+                            司馬庫斯Smangus，位於新竹縣尖石鄉，台灣最後一個黑暗部落。以傳統土地共有、合作共生的精神，共同經營部落，連結土地與人，並將泰雅民族文化、以及共享制度毫無保留地分享及傳達，給來此體驗的貴賓們。鎮西堡具有雄偉壯麗的神木群景觀，與司馬庫斯隔一座山頭，同為泰雅族，族語稱「Cinsbu」意為「清晨時分，太陽第一個照耀之地，終年日照充足，土壤肥美。」，兩地表現了不同的風情與價值，值得一次來認識。
+                            ★溫馨提醒★此行程一次滿足大家兩個願望:踏入司馬庫斯巨木群步道+鎮西堡B區神木群 2024年櫻花季開放結束，期待
+                            2025櫻花季來臨。
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>NT</em><b>6200</b><em>起</em>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idx-rcmd__item idx-tour">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=15" title="《南疆聖域》北大武山兩天一夜(高雄出發)">
+                            <img src="./images3/North_Da_Wu_Mt_368x245.jpg" alt="《南疆聖域》北大武山兩天一夜(高雄出發)"></a>
+                        <div class="idx-tour__img-text">登山健行</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=15" class="idx-tour__title"
+                            title="《南疆聖域》北大武山兩天一夜(高雄出發)">《南疆聖域》北大武山兩天一夜(高雄出發)</a>
+                        <div class="idx-tour__word">
+                            北大武山，位於屏東瑪家鄉、泰武鄉與臺東縣金峰鄉交界，標高3,092M，南疆聖山、雲海的故鄉，台灣五岳之一。踏上中央山脈主稜，最巍峨高聳的北大武山，在森林裡持續的向上，來到3.8K被俗稱「光明頂」的喜多麗斷崖觀景台，金色滾動翻騰的雲海四處捲來，在山谷集中，稜線上的鐵杉，凋零卻用充滿生命力的彎曲的伸展枝幹，歷經重重考驗及體力的挑戰，終於踏上「南台灣屏障」北大武山三角點，瞬間忘卻一路艱辛的路程，感嘆自己的渺小。
+                            ★溫馨提醒★此行程屬5星行程，報名後請提供客服您近三個月內的爬山經歷，以利給予建議 ★溫馨提醒★此行程出發前30天抽籤，出發前35天截止報名
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>NT</em><b>5800</b><em>起</em>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idx-rcmd__item idx-tour">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=36" title="《六人成行》免抽籤百岳 - 郡大山一天一夜(台北出發)">
+                            <img src="./images3/gun_da_mt_368x245.jpg" alt="《六人成行》免抽籤百岳 - 郡大山一天一夜(台北出發)"></a>
+                        <div class="idx-tour__img-text">登山健行</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=36" class="idx-tour__title"
+                            title="《六人成行》免抽籤百岳 - 郡大山一天一夜(台北出發)">《六人成行》免抽籤百岳 - 郡大山一天一夜(台北出發)</a>
+                        <div class="idx-tour__word">
+                            郡大山，台灣百岳排名54，全程沒有太困難或複雜的地形，是非常適合新手一日輕裝單攻的郊山化百岳。 ★溫馨提醒★此行程須於出發前4-5日申請入山證，出發前7日截止報名。
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>NT</em><b>5200</b><em>起</em>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idx-rcmd__item idx-tour" style="display: none;">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=40" title="《天使的眼淚》嘉明湖免背公裝公糧三天兩夜">
+                            <img src="/img/Travel/angel_teardrop_368x245.jpg" alt="《天使的眼淚》嘉明湖免背公裝公糧三天兩夜"></a>
+                        <div class="idx-tour__img-text">登山健行</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=40" class="idx-tour__title"
+                            title="《天使的眼淚》嘉明湖免背公裝公糧三天兩夜">《天使的眼淚》嘉明湖免背公裝公糧三天兩夜</a>
+                        <div class="idx-tour__word">
+                            嘉明湖因其湖水顏色深藍如寶石，而有了「上帝遺失在人間之藍寶石」、「天使的眼淚」等稱號，吸引無數山友慕名前往。
+                            不過對當地的布農族人來說，「月亮的鏡子」才是這裡的傳統地名。讓我們迎著月光、伴著星光、向著陽光，一起到山上以及部落裡，尋找與天神的誓約。
+                            ★溫馨提醒★此行程出發前30天抽籤，出發前35天截止報名
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>NT</em><b>9200</b><em>起</em>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idx-rcmd__item idx-tour" style="display: none;">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=69" title="《海岸漫遊》最純海岸線 - 阿塱壹古道一日遊-高雄出發">
+                            <img src="/img/Travel/201220115155691.jpg" alt="《海岸漫遊》最純海岸線 - 阿塱壹古道一日遊-高雄出發"></a>
+                        <div class="idx-tour__img-text">台灣深度旅行</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=69" class="idx-tour__title"
+                            title="《海岸漫遊》最純海岸線 - 阿塱壹古道一日遊-高雄出發">《海岸漫遊》最純海岸線 - 阿塱壹古道一日遊-高雄出發</a>
+                        <div class="idx-tour__word">
+                            旭海觀音鼻又稱『卑南-琅嶠古道』，是目前尚未被公路開發的海岸線，經由自然保護團體的努力，得以保存下來，讓我們一起邊欣賞海岸線之美，邊聽歷史故事吧！
+                            ★溫馨提醒★此行程出發前30天申請限量名額，出發前35天截止報名發佈日期：2023-03-30 發佈單位：林保科 &lt;=
+                            了解公告資訊，請點我為加強地景保育，進一步維護自然保留區生態環境，將於每年7、8月份關閉保留區，暫停申請進入，敬請配合。旭海-觀音鼻自然保留區解說服務費調整重要訊息公告，&lt;=
+                            了解公告資訊，請點我發佈日期：2024-02-23 發佈單位：林保科申請自113年5月1日起進入保留區每位解說員費用調整為新臺幣4,000元整,特此公告。
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>NT</em><b>1800</b><em>起</em>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idx-rcmd__item idx-tour" style="display: none;">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=198" title="《尼泊爾》ACT安納普娜大環線與堤麗丘湖18日健行">
+                            <img src="/img/image/國外/安納普娜大環線/20180807_092144.jpg" alt="《尼泊爾》ACT安納普娜大環線與堤麗丘湖18日健行"></a>
+                        <div class="idx-tour__img-text">國外行程</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=198" class="idx-tour__title"
+                            title="《尼泊爾》ACT安納普娜大環線與堤麗丘湖18日健行">《尼泊爾》ACT安納普娜大環線與堤麗丘湖18日健行</a>
+                        <div class="idx-tour__word">
+                            聖母峰，尼泊爾稱薩加瑪塔峰（尼泊爾語：सगरमाथा，轉寫：Sagarmāthā）海拔8848公尺，世界第一高峰，同時也是喜馬拉雅山脈的主峰，平均溫度在零下29度，在聯合國教科文組織已經將薩加瑪塔國家公園列入世界自然遺產之內。
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>即將開團</em>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idx-rcmd__item idx-tour" style="display: none;">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=187" title="《南疆聖域》北大武山三天兩夜(高雄出發)">
+                            <img src="/img/Travel/North_Da_Wu_Mt_368x245.jpg" alt="《南疆聖域》北大武山三天兩夜(高雄出發)"></a>
+                        <div class="idx-tour__img-text">登山健行</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=187" class="idx-tour__title"
+                            title="《南疆聖域》北大武山三天兩夜(高雄出發)">《南疆聖域》北大武山三天兩夜(高雄出發)</a>
+                        <div class="idx-tour__word">
+                            北大武山，位於屏東瑪家鄉、泰武鄉與臺東縣金峰鄉交界，標高3,092M，南疆聖山、雲海的故鄉，台灣五岳之一。踏上中央山脈主稜，最巍峨高聳的北大武山，在森林裡持續的向上，來到3.8K被俗稱「光明頂」的喜多麗斷崖觀景台，金色滾動翻騰的雲海四處捲來，在山谷集中，稜線上的鐵杉，凋零卻用充滿生命力的彎曲的伸展枝幹，歷經重重考驗及體力的挑戰，終於踏上「南台灣屏障」北大武山三角點，瞬間忘卻一路艱辛的路程，感嘆自己的渺小。
+                            ★溫馨提醒★此行程屬4星行程，報名後請提供客服您近三個月內的爬山經歷，以利給予建議 ★溫馨提醒★此行程出發前30天抽籤，出發前35天截止報名
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>NT</em><b>9380</b><em>起</em>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idx-rcmd__item idx-tour" style="display: none;">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=200" title="《尼泊爾》藍塘10日健行">
+                            <img src="/img/image/國外/藍塘健行行程/20230515_062826.jpg" alt="《尼泊爾》藍塘10日健行"></a>
+                        <div class="idx-tour__img-text">國外行程</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=200" class="idx-tour__title"
+                            title="《尼泊爾》藍塘10日健行">《尼泊爾》藍塘10日健行</a>
+                        <div class="idx-tour__word">
+                            聖母峰，尼泊爾稱薩加瑪塔峰（尼泊爾語：सगरमाथा，轉寫：Sagarmāthā）海拔8848公尺，世界第一高峰，同時也是喜馬拉雅山脈的主峰，平均溫度在零下29度，在聯合國教科文組織已經將薩加瑪塔國家公園列入世界自然遺產之內。
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>即將開團</em>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idx-rcmd__item idx-tour" style="display: none;">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=166" title="《漫遊部落》司馬庫斯森呼吸漫遊二日">
+                            <img src="/img/image/司馬庫斯/220304094245709.jpg" alt="《漫遊部落》司馬庫斯森呼吸漫遊二日"></a>
+                        <div class="idx-tour__img-text">台灣深度旅行</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=166" class="idx-tour__title"
+                            title="《漫遊部落》司馬庫斯森呼吸漫遊二日">《漫遊部落》司馬庫斯森呼吸漫遊二日</a>
+                        <div class="idx-tour__word">
+                            上帝的部落 -
+                            司馬庫斯Smangus，位於新竹縣尖石鄉，台灣最後一個黑暗部落。以傳統土地共有、合作共生的精神，共同經營部落，連結土地與人，並將泰雅民族文化、以及共享制度毫無保留地分享及傳達，給來此體驗的貴賓們。
+                            2024年櫻花季開放結束，期待 2025櫻花季來臨。
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>NT</em><b>5800</b><em>起</em>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idx-rcmd__item idx-tour" style="display: none;">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=201" title="《尼泊爾》馬諦山群10日健行">
+                            <img src="/img/image/國外/馬諦山群健行行程/20230505_074755.jpg" alt="《尼泊爾》馬諦山群10日健行"></a>
+                        <div class="idx-tour__img-text">國外行程</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=201" class="idx-tour__title"
+                            title="《尼泊爾》馬諦山群10日健行">《尼泊爾》馬諦山群10日健行</a>
+                        <div class="idx-tour__word">
+                            聖母峰，尼泊爾稱薩加瑪塔峰（尼泊爾語：सगरमाथा，轉寫：Sagarmāthā）海拔8848公尺，世界第一高峰，同時也是喜馬拉雅山脈的主峰，平均溫度在零下29度，在聯合國教科文組織已經將薩加瑪塔國家公園列入世界自然遺產之內。
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>即將開團</em>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="idx-rcmd__item idx-tour" style="display: none;">
+                    <div class="idx-tour__img">
+                        <a href="travel-detail.aspx?Id=184" title="《 台灣阿爾卑斯山 》合歡四峰兩天一夜">
+                            <img src="/img/Travel/小/210506092823631.jpg" alt="《 台灣阿爾卑斯山 》合歡四峰兩天一夜"></a>
+                        <div class="idx-tour__img-text">登山健行</div>
+                    </div>
+                    <div class="idx-tour__text">
+                        <a href="travel-detail.aspx?Id=184" class="idx-tour__title" title="《 台灣阿爾卑斯山 》合歡四峰兩天一夜">《
+                            台灣阿爾卑斯山
+                            》合歡四峰兩天一夜</a>
+                        <div class="idx-tour__word">
+                            位在花蓮線與南投縣交界地帶的合歡群峰，在未覆雪的季節裡，這裡是一片片有如阿爾卑斯山的箭竹緩草原。合歡山名字源自於日治時期，日本人在理番計畫中開闢出了「合歡越道路」，在公路尚未闢建時，攀登合歡群峰原為需耗時至少三晝夜才能攻頂，如今公路的興建，讓合歡群峰變成最適合新手的百岳。
+                            5月合歡杜鵑花季，台14甲道路由18K至41K，實施管制措施。高層管制措施：限搭乘３人以上小客車開放通行、客運接駁車及乙類客車，不受管制。流量管制措施：高承載管制期間會在視台14甲線的壅塞情況，另實施每10分鐘放行20分鐘的流量管制。
+                            1月-2月合歡雪季實施管制措施 1. 遇下(積)雪時實施交通管制，未遇下(積)雪時實施交通疏導。 2.交通疏導期間，大禹嶺至合歡山遊客服務中心及翠峰以上路段。
+                        </div>
+                        <div class="idx-tour__price all-price">
+                            <em>NT</em><b>6200</b><em>起</em>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="open-btn-box" style="clear: both;">
+                    <div class="open-btn">更多行程<i class="icon-arrow-thin-down"></i></div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- 熱門推薦// -->
+
+        <!-- 保證成團 -->
+        <!-- 保證成團// -->
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-box all-container">
+            <div class="footer__list flex">
+                <div class="footer__info-left flex">
+                    <div class="footer__logo">
+                        <img src="./images/logo.svg" alt="">
+                    </div>
+
+                    <ul class="footer__nav">
+                        <li><a href="inquiry.aspx" title="包團諮詢">包團諮詢</a></li>
+                        <li><a href="https://taiwangoodtour.blogspot.com/" target="_blank" title="戶外攻略">戶外攻略</a></li>
+                        <li><a href="download.aspx" title="下載專區">下載專區</a></li>
+                        <li><a href="javascript:;" title="商業合作">商業合作</a></li>
+                        <li><a href="download/terms_of_service.pdf" title="服務條款" target="_blank">服務條款</a></li>
+                        <li><a href="download/privacy_policy.pdf" title="隱私權政策" target="_blank">隱私權政策</a></li>
+                        <li><a href="login.aspx" title="會員專區">會員專區</a></li>
+                    </ul>
+                </div>
+                <div class="footer__info-right flex">
+                    <div class="footer__info-list flex">
+                        <div class="footer__info-title">
+                            <i class="icon-phone"></i><span>電話</span>
+                        </div>
+                        <div class="footer__text">02-25318401</div>
+                    </div>
+                    <div class="footer__info-list flex">
+                        <div class="footer__info-title">
+                            <i class="icon-emailmail"></i><span>Email</span>
+                        </div>
+                        <div class="footer__text">goodtourservice@gmail.com</div>
+                    </div>
+                    <div class="footer__info-list flex">
+                        <div class="footer__info-title">
+                            <i class="icon-chrome_reader"></i><span>傳真</span>
+                        </div>
+                        <div class="footer__text">02-33229255</div>
+                    </div>
+                    <div class="footer__info-list flex">
+                        <div class="footer__info-title">
+                            <i class="icon-pin"></i><span>地址</span>
+                        </div>
+                        <div class="footer__text">104 台北市南京東路一段120號9樓之5</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__list">
+                <article class="footer__about">
+                    <h2 class="footer__about-btn">關於好野</h2>
+                    <div id="footer-about" class="footer__about-collapse">
+                        好野旅遊，不分男女、不分老少，台灣的山林、台灣的海洋，全世界，只要有陽光照得到的地方，都是我們想到達的地方。
+                        在邁入西元2020年的這個年頭，我們也將官方網站一併升級，推出線上刷卡的功能，讓您在付款方面擁有更安心的選項，而除了山野健行、生態探索、新手百岳等行程，也將推出國外登山健行、國內溯溪、潛水，喜歡深度旅遊的你，來跟我們「野」在一起，越「野」越快樂！
+                    </div>
+                </article>
+            </div>
+            <div class="footer__list">
+                <ul class="footer__com">
+                    <li>好野旅遊 好野戶外探索有限公司</li>
+                    <li>賓士旅行社有限公司 交觀甲5800號 / 品保編號北1269號</li>
+                    <li>網站旅遊行程為賓士旅行社協助辦理出團</li>
+                    <li>營業時間：周一至周五09:00-18:00 ( 例假日及國定假日休假 )</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div class="all-container">
+                <span>Copyright © 2020 好野旅遊 賓士旅行社有限公司 All Rights Reserved.</span>
+                <div class="ework">
+                    Designed by
+                    <a href="https://www.webdesigns.com.tw" title="" target="_blank">一化網頁設計</a>
+                </div>
+            </div>
+        </div>F
+
+    </footer>
+
+
+</body>
+
+</html>
